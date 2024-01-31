@@ -1,0 +1,96 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: -webkit-linear-gradient(to right, #a8e063, #56ab2f); 
+    background: linear-gradient(to right, #a8e063, #56ab2f); 
+    background: #8fda6c; 
+
+}
+.main{
+    display: flex;
+}
+.left{
+    width: 50%;
+}
+
+.right{
+    width:50%;
+}
+/* register */
+
+.signup_box{
+    width: 360px;
+    height: 580px;
+    margin: auto;
+    background-color: white;
+    border-radius: 3px;
+    margin-top: 0;
+
+}
+h1{
+    text-align: center;
+    padding-top: 15px;
+}
+form{
+    width: 300px;
+    margin-left: 20px;
+}
+form label{
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+
+}
+form input{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid grey;
+    border-radius: 6px;
+
+}
+.submit{
+    width: 300px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: rgb(32, 188, 32);
+    color: white;
+    font-size: 18px;
+
+}
+.para-2{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.para-2 a{
+    color: white;
+}
+
+/* login */
+
+.login_box{
+    width: 360px;
+    height: 400px;
+    margin: auto;
+    background-color: white;
+    border-radius: 3px;
+
+
+}
+
+.flash-messages {
+    background-color: #dff0d8;
+    border: 1px solid #3c763d;
+    color: #3c763d;
+    padding: 10px;
+    margin: 0 5px 15px 5px;
+    border-radius: 4px;
+  }
+  
+  .flash-message {
+    list-style-type: none;
+    margin: 5px 0;
+  }
+

@@ -1,0 +1,75 @@
+{% extends 'base.html'%}
+    {% block title %} register {%endblock%}
+    <link rel="stylesheet" href="{{url_for('static',filename='styles/style.css')}}" >
+
+    {% block content %} 
+
+    <div class="main">
+        <div class="left">
+            <!-- <img src="{{url_for('static', filename='images/c.png')}}" style="margin-left:200px; margin-top: 50px;" alt="image not loading"> -->
+
+        
+
+        </div>
+        <!-- {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                     <ul>
+                       {% for message in messages %}
+                          <li>{{ message }}</li>
+                       {% endfor %}
+                     </ul>
+                    {% endif %}
+                 {% endwith %} -->
+
+                 
+        <div class="right">
+            <div class="signup_box">
+                <h1>Sign up</h1>
+                
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                  <div class="flash-messages">
+                    <ul>
+                      {% for message in messages %}
+                        <li class="flash-message">{{ message }}</li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% endif %}
+              {% endwith %}
+
+                <form  method="POST" action="{{ url_for('register') }}" id="registrationForm">
+                    <label>Username</label>
+                    <input type="text" name="uname">
+                    <label>Email</label>
+                    <input type="email" name="email">
+                    <label>Password</label>
+                    <input type="password" name="password" id="password" >
+                    <label>Confirm password</label>
+                    <input type="password" name="cpass" id="cpass">
+                    <!-- <input class="submit" type="submit" value="submit"> -->
+                    <button class="submit" type="button" onclick="checkPassword()">Register</button>
+
+                </form>
+                </div>
+                <p class="para-2">Already have an account ? <a href="{{url_for('login')}}">Login Here</a></p>
+
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("cpass").value;
+
+        if (password !== confirmPassword) {
+            alert("Password and Confirm Password do not match. Please try again.");
+        } else {
+            document.getElementById("registrationForm").submit();
+        }
+    }
+
+    </script>    
+
+    
+{% endblock %}
